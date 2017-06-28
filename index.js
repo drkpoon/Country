@@ -26,6 +26,7 @@ agenda.on('fail', function(job){
 }); */
 
 var options = {
+	useMongoClient: true,
 	user: 'derek',
 	pass: 'poon'
 }
