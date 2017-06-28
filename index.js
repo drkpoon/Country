@@ -25,7 +25,11 @@ agenda.on('fail', function(job){
   job.remove();
 }); */
 
-mongoose.connect('mongodb://derek:poon@172.30.235.163/sampledb/countries');
+var options = {
+	user: 'derek',
+	pass: 'poon'
+}
+mongoose.connect('mongodb://172.30.235.163/sampledb/countries', options);
 var conn = mongoose.connection;
 Grid.mongo = mongoose.mongo;
 var gfs = Grid(conn.db);
