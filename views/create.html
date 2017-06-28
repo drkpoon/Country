@@ -1,0 +1,81 @@
+<!DOCTYPE html height="100%" width="100%">
+<head>
+	<meta charset="UTF-8">
+	<title>Main Menu</title>
+	<style>
+		.table{
+			display: table;
+			width: 50%;
+			height: 50%;
+			border: solid black;
+			margin: auto;
+		}
+		.caption{
+			display: table-caption;
+			text-align: center;
+		}
+		.row {
+			display: table-row;
+			text-align: center;
+		}
+		.cell {
+			display: table-cell;
+			border: solid grey;
+			position: relative;
+			width: 50%;
+			height: 50%;
+		}
+		.content{
+			margin: auto;
+			position: relative;
+			top: 50%;
+		}
+		form{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+		button{
+			width: 50%;
+			height: 5%;			
+		}
+	</style>
+</head>
+<body><form action="/create" method="POST" enctype="multipart/form-data">
+	<div class="table">
+		<div class="caption">Enter Info:</div>
+		<div class="row">
+			<div class="cell">
+				<div class="content">
+					Country: <input type="text" placeholder="name" name="country" required="true"><br>
+					ISO: <input type="text" placeholder="iso" name="iso" required="true"><br>
+					Capital: <input type="text" placeholder="capital" name="capital">
+				</div>
+			</div>
+			<div class="cell">
+				<div class="content">
+					Flag: <input type="file" name="flag">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell">
+				<div class="content">
+					Area: <input type="text" placeholder="area" name="area"><br>				
+					Population: <input type="text" placeholder="population" name="population">
+				</div>
+			</div>
+			<div class="cell">
+				<div class="content">
+					Anthem: <input type="file" name="anthem">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+		<button type="submit" class="button">Create</button>
+	</form>
+
+</body>
+</html>

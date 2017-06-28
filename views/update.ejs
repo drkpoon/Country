@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Update</title>
+	<style>
+		td {
+			border: solid black;
+			padding-left: 10%;
+		}
+		button{
+			width: 50%			
+		}
+		.btncell{
+
+		}
+	</style>
+</head>
+<body>
+	<form action="/updateInfo" method="POST" enctype="multipart/form-data">
+		<table style="width:100%">
+			<caption>Current Info:</caption>
+			<tr>
+				<td width="50%">
+					Country：<input type="text" value="<%= country.country %>" name="country" required="true"><br>
+					Capital :<input type="text" value="<%= country.capital %>" name="capital"><br>
+					ISO : <input type="text" value=<%= country.iso %> name="iso"><br>
+					Area (km<sup>2</sup>) : <input type="text" value=<%= country.area %> name="area"><br>
+					Population : <input type="text" value=<%= country.population %> name="population"><br>
+					
+					<input type="text" name="id" value=<%= country._id %> hidden>
+				</td>
+				<td>
+					Flag:<br>
+					<img src=<%= imagefile %> alt="Photo" width="50%" height="auto"><br>
+					<input type="file" name="flag"><br>					
+					Anthem:<br>
+					<video width="320" height="240" controls>
+					<source src=<%= videofile %>>  
+						Your browser does not support the video tag.
+					</video> 
+					<input type="file" name="anthem">
+				</td>
+			</tr>
+			<td>
+		<button type="submit">Update</button>
+		</td class="btncell">
+		<td>
+		<button type="reset">Reset</button>
+		</td class="batncell">
+			<tr></tr>
+		</table>
+	</form>
+</body>
+</html>

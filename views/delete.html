@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Delete</title>
+	<style type="text/css">
+		form{
+			border: solid black;
+			margin: auto;
+			width: 50%;
+			text-align: center;
+		}
+		.wrapper {
+			text-align: center;
+		}
+
+		.button {
+			position: absolute;
+			top: 50%;
+		}
+	</style>
+</head>
+<body>	
+	<script type="text/javascript">
+		function confirmation(){
+			if (confirm("Are you sure to delete?") == true){
+				document.getElementById("form_delete").submit();
+			}
+		}
+	</script>
+	<form action="/delete" method="POST", id="form_delete">
+		Enter Id to delete:<br>
+		<input type="text" name="id"><br>
+	</form>
+
+	<div class="wrapper">
+		<button onclick="confirmation()">Delete!</button> 
+	</div>
+</body>
+</html>

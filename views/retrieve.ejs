@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Retrieve</title>
+	<style type="text/css">
+		form{
+			border: solid black;
+			margin: auto;
+			width: 50%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form action="<%= action %>" method="POST">
+		Choose from list:
+		<p id="selectList"></p>
+		<br><br>
+		<!-- Enter name: <input type="text" placeholder="name" name="name"><br><br> -->
+		<button type="submit">Retrieve</button>
+	</form>
+
+	<script type="text/javascript">		
+		var mlist = [];
+
+		<% namelist.forEach(function(element){ %>
+			mlist.push( "<%= element %>" );
+		<% }); %>
+
+		mlist.sort(function(a,b){
+			return a.localeCompare(b);
+		});
+
+		var temp = '<select name="selected">';
+		for (i=0; i<mlist.length; i++){
+			temp += "<option value=" + mlist[i] + ">" + mlist[i] + "</option>";
+		}
+		temp += "</select>";
+		document.getElementById("selectList").innerHTML = temp;
+
+	</script>
+</body>
+</html>

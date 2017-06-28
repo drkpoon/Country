@@ -1,0 +1,85 @@
+<!DOCTYPE html height="100%">
+<head>
+	<meta charset="UTF-8">
+	<title>Main Menu</title>
+	<style type="text/css">
+		.table {
+			display: table;
+			border: 1px solid black;
+			position: relative;
+			width: 50%;
+			height: 50%;
+			top: 25%;
+			margin: auto;
+		}
+		.caption {
+			display: table-caption;
+			text-align: center;
+		}
+		.row {
+			display: table-row;
+			text-align: center;
+		}
+		.cell {
+			display: table-cell;
+			width: 50%;
+			height: 50%;
+			margin: auto;
+		}
+		form {
+			border: 1px solid grey;
+			position: relative;
+			top: 5%;
+			right: -5%;
+			width: 90%;
+			height: 90%;
+		}
+		.button{
+			position: relative;
+			top: 25%;
+			right: 0%;
+			width: 50%;
+			height: 50%;
+			opacity: 0.7;
+		}
+		body{
+			width: 100%;
+			height: 100%;
+			/*background-image: url("../ph-2914.jpg");*/
+			background-color: #cccccc;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+		}
+	</style>
+</head>
+<body>
+	<div class="table">
+		<div class="caption"><h2><strong>Main Menu -- Country</strong></h2></div>
+		<div class="row">
+			<div class="cell">
+				<form action="/create" method="GET">
+					<button type="submit" class="button">Create</button>  
+				</form>
+			</div>
+			<div class="cell">
+				<form action="/retrieve" method="GET">
+					<button type="submit" class="button">Retrieve</button>  
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell">
+				<form action="/update" method="GET">
+					<button type="submit" class="button">Update</button>  
+				</form>			
+			</div>
+			<div class="cell">
+				<form action="/delete" method="GET">
+					<button type="submit" class="button">Delete</button>  
+				</form>			
+			</div>
+		</div>
+	</div>
+</body>
+</html>

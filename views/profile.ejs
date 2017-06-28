@@ -1,0 +1,64 @@
+<!DOCTYPE html height="100%">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Profile</title>
+	<style type="text/css">
+		.table{
+			display: table;
+			border: solid black;
+			width: 100%;
+			height: 100%;
+		}
+		.heading{
+			display: table-cell;
+			border: solid thin blue;			
+			text-align: center;
+			width: 50%;
+		}
+		.row{
+			display: table-row;			
+		}
+		.cell{
+			display: table-cell;
+			border: solid grey;
+			width: 50%;
+			vertical-align: middle;
+			padding-left: 10%;
+			margin: auto;
+		}
+		.photocell{
+			display: table-cell;
+			border: solid grey;
+			text-align: center;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+	<div class="table">
+		<div class="row">		
+			<div class="heading">Info</div>
+			<div class="heading">Flag & Anthem</div>		
+		</div>
+
+		<div class="row">
+			<div class="cell">
+				<strong>Reference ID：</strong><%= country._id %><br>
+				<strong>Country:</strong><%= country.country %><br>
+				<strong>Capital: </strong><%= country.capital %><br>
+				<strong>ISO：</strong><%= country.iso %><br>	
+				<strong>Area：</strong><%= country.area %> km<sup>2</sup><br>	
+				<strong>Population：</strong><%= country.population %><br>	
+			</div>
+			<div class="photocell" align="center">
+				<img src=<%= imagefile %> alt="Photo" width="50%" height="auto"><br>
+				<video width="320" height="240" controls>
+					<source src=<%= videofile %>>
+					Your browser does not support the video tag.
+				</video> 			
+			</div>
+		</div>
+	</div>
+</body>
+</html>
