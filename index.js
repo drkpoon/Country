@@ -25,7 +25,7 @@ agenda.on('fail', function(job){
   job.remove();
 }); */
 
-mongoose.connect('mongodb://userYMN:bD3FmLqunDM0EdnA@172.31.51.227/sampledb/countries');
+mongoose.connect('mongodb://derek:poon@172.30.235.163/sampledb/countries');
 var conn = mongoose.connection;
 Grid.mongo = mongoose.mongo;
 var gfs = Grid(conn.db);
