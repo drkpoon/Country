@@ -25,15 +25,23 @@ agenda.on('fail', function(job){
   job.remove();
 }); */
 
-var options = {
-	useMongoClient: true,
-	user: 'derek',
-	pass: 'poon'
-}
-mongoose.connect('mongodb://172.30.235.163/sampledb/countries', options);
+// var options = {
+	// useMongoClient: true,
+	// user: 'derek',
+	// pass: 'poon'
+// }
+// mongoose.connect('mongodb://172.30.235.163/sampledb/countries', options);
+
+
+var MongoClient = require('mongodb').MongoClient;
+MongoClient.connect("mongodb://derek:poon@172.30.235.163:27017/exampledatabase", function(err, db) {
+  // Now you can use the database in the db variable
 var conn = mongoose.connection;
 Grid.mongo = mongoose.mongo;
 var gfs = Grid(conn.db);
+  
+});
+
 var util = require('util'),
 EventEmitter = require('events').EventEmitter;
 var Country = require('./user.js');
