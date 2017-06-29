@@ -40,8 +40,6 @@ var conn = mongoose.connection;
 Grid.mongo = mongoose.mongo;
 var gfs = Grid(conn.db);
   
-});
-
 var util = require('util'),
 EventEmitter = require('events').EventEmitter;
 var Country = require('./user.js');
