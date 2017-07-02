@@ -30,15 +30,26 @@ agenda.on('fail', function(job){
 	// user: 'derek',
 	// pass: 'poon'
 // }
-mongoose.connect('mongodb://derek:poon@172.30.235.163/sampledb/countries');
 
+var collection;
+var database;
+var url = "mongodb://" + process.env.MONGODB_USER + ":" + process.env.MONGODB_PASSWORD
+	+ "@10.130.52.196:27017/countries";
+var MongoClient = require('mongodb').MongoClient;
+MongoClient.connect(url, function(err, db){
+	if (err)	{
+		console.log("fail to open");
+	}else{
+	console.log('connected');
+	collection = db.collection('profiles');
+	database = db;
+	}
+});
 
-//var MongoClient = require('mongodb').MongoClient;
-//MongoClient.connect("mongodb://derek:poon@172.30.235.163:27017/exampledatabase", function(err, db) {
-  // Now you can use the database in the db variable
 var conn = mongoose.connection;
 Grid.mongo = mongoose.mongo;
-var gfs = Grid(conn.db);
+//var gfs = Grid(conn.db);
+var gfs = Grid(database);
   
 var util = require('util'),
 EventEmitter = require('events').EventEmitter;
