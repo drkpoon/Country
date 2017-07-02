@@ -33,6 +33,7 @@ agenda.on('fail', function(job){
 
 var collection;
 var database;
+var gfs;
 var url = "mongodb://" + process.env.MONGODB_USER + ":" + process.env.MONGODB_PASSWORD
 	+ "@10.130.52.196:27017/countries";
 var MongoClient = require('mongodb').MongoClient;
@@ -43,13 +44,15 @@ MongoClient.connect(url, function(err, db){
 	console.log('connected');
 	collection = db.collection('profiles');
 	database = db;
-	}
-});
-
+	
 var conn = mongoose.connection;
 Grid.mongo = mongoose.mongo;
 //var gfs = Grid(conn.db);
-var gfs = Grid(database);
+ gfs = Grid(database);
+	
+	}
+});
+
   
 var util = require('util'),
 EventEmitter = require('events').EventEmitter;
