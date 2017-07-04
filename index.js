@@ -24,9 +24,8 @@ const PURGE_TIMER = 20;
         agenda.on('fail', function(job){
         job.remove();
         });
-        var collection;
-        var gfs;
-        var url = "mongodb://" + process.env.MONGODB_USER + ":" + process.env.MONGODB_PASSWORD + "@10.130.52.196:27017/countries";
+
+var url = "mongodb://" + process.env.MONGODB_USER + ":" + process.env.MONGODB_PASSWORD + "@10.130.52.196:27017/countries";
 //        var url = "mongodb://derek:derek@localhost:27017/countries";
         var MongoClient = require('mongodb').MongoClient;
         MongoClient.connect(url, function (err, db) {
@@ -259,3 +258,10 @@ var jobname = 'cleaning' + new Date().getTime();
         });
         agenda.schedule('in ' + PURGE_TIMER + ' seconds', jobname);
 }
+
+//sh-4.2$ echo $MONGODB_USER                                                                                                                                                                          
+//userLRG                                                                                                                                                                                             
+//sh-4.2$ echo $MONGODB_PASSWORD                                                                                                                                                                      
+//R30lMtbfx6xGIsxq                                                                                                                                                                                    
+//sh-4.2$ echo $MONGODB_ADMIN_PASSWORD                                                                                                                                                                
+//xAYJeics7snKuMLF
