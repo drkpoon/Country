@@ -12,7 +12,7 @@ const PURGE_TIMER = 20;
         var mongo = require('mongodb');
         var ObjectID = require('mongodb').ObjectID;
         var Agenda = require('agenda');
-        var mongoConnectionString = 'mongodb://' + process.env.MONGODB_USER + ':' process.env.MONGODB_PASSWORD + '@10.130.52.196:27017/agenda';
+        var mongoConnectionString = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD + '@10.130.52.196:27017/agenda';
         var agenda = new Agenda({db: {address: mongoConnectionString}});
         agenda.on('ready', function(){
         agenda.purge();
@@ -26,7 +26,7 @@ const PURGE_TIMER = 20;
         });
         var collection;
         var gfs;
-var url = "mongodb://" + process.env.MONGODB_USER + ":" + process.env.MONGODB_PASSWORD + "@10.130.52.196:27017/countries";
+        var url = "mongodb://" + process.env.MONGODB_USER + ":" + process.env.MONGODB_PASSWORD + "@10.130.52.196:27017/countries";
 //        var url = "mongodb://derek:derek@localhost:27017/countries";
         var MongoClient = require('mongodb').MongoClient;
         MongoClient.connect(url, function (err, db) {
