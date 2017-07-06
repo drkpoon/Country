@@ -13,8 +13,13 @@ var mongo = require('mongodb')
 var ObjectID = require('mongodb').ObjectID
 var Agenda = require('agenda')
 var NumberParser = require('numberparser');
-// var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD + '@10.130.52.196:27017'
-var rootUrl = 'mongodb://' + 'derek' + ':' + 'derek' + '@localhost:27017'
+
+if (process.env.MONGODB_USER){
+  var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD + '@10.130.52.196:27017'
+}else{
+  var rootUrl = 'mongodb://' + 'derek' + ':' + 'derek' + '@localhost:27017'
+}
+
 var mongoConnectionString = rootUrl + '/agenda'
 var agenda = new Agenda({ db: { address: mongoConnectionString } })
 agenda.on('ready', function () {
