@@ -15,7 +15,7 @@ var Agenda = require('agenda')
 var NumberParser = require('numberparser');
 
 if (process.env.MONGODB_USER){
-  var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD + '@10.130.52.196:27017'
+  var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD + '@10.129.96.12:27017'
 }else{
   var rootUrl = 'mongodb://' + 'derek' + ':' + 'derek' + '@localhost:27017'
 }
