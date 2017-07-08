@@ -15,7 +15,7 @@ var Agenda = require('agenda')
 var NumberParser = require('numberparser');
 
 if (process.env.MONGODB_USER){
-  var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD + '@10.129.66.201:27017'
+  var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD + '@10.131.114.234:27017'
 }else{
   var rootUrl = 'mongodb://' + 'derek' + ':' + 'derek' + '@localhost:27017'
 }
@@ -283,9 +283,9 @@ function purgeJob (result2, result3) {
   agenda.schedule('in ' + PURGE_TIMER + ' seconds', jobname)
 }
 
-// sh-4.2$ echo $MONGODB_USER                                                                                                                                                                          
-// userMYP                                                                                                                                                                                             
-// sh-4.2$ echo $MONGODB_PASSWORD                                                                                                                                                                      
-// axope0UJXKvl1iEB                                                                                                                                                                                    
-// sh-4.2$ echo $MONGODB_ADMIN_PASSWORD                                                                                                                                                                
-// L4asLKljjF7Josly
+// sh-4.2$ echo $MONGODB_USER               
+// userVGH
+// sh-4.2$ echo $MONGODB_PASSWORD
+// ajHd4vA0RcLSOL8e
+// sh-4.2$ echo $MONGODB_ADMIN_PASSWORD
+// qhrYB3P6Q4jov368
