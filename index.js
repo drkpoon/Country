@@ -15,7 +15,7 @@ var Agenda = require('agenda')
 var NumberParser = require('numberparser');
 
 if (process.env.MONGODB_USER){
-  var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD + '@10.129.96.12:27017'
+  var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_PASSWORD + '@10.130.106.248:27017'
 }else{
   var rootUrl = 'mongodb://' + 'derek' + ':' + 'derek' + '@localhost:27017'
 }
@@ -78,7 +78,7 @@ app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-app.get('/pageCount', function(req, res){
+app.get('/pagecount', function(req, res){
 	res.end('ok');
 });
 
@@ -284,8 +284,8 @@ function purgeJob (result2, result3) {
 }
 
 // sh-4.2$ echo $MONGODB_USER                                                                                                                                                                          
-// userLRG                                                                                                                                                                                             
+// userMYP                                                                                                                                                                                             
 // sh-4.2$ echo $MONGODB_PASSWORD                                                                                                                                                                      
-// R30lMtbfx6xGIsxq                                                                                                                                                                                    
+// axope0UJXKvl1iEB                                                                                                                                                                                    
 // sh-4.2$ echo $MONGODB_ADMIN_PASSWORD                                                                                                                                                                
-// xAYJeics7snKuMLF
+// L4asLKljjF7Josly
