@@ -77,6 +77,11 @@ var upload = multer({ storage: mystorage }).fields([
 app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+
+app.get('/pageCount', function(req, res){
+	res.end('ok');
+});
+
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/views/menu.html')
 })
