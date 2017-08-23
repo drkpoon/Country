@@ -15,6 +15,7 @@
 			border: solid thin blue;			
 			text-align: center;
 			width: 50%;
+			vertical-align: middle;
 		}
 		.row{
 			display: table-row;			
@@ -26,12 +27,14 @@
 			vertical-align: middle;
 			padding-left: 10%;
 			margin: auto;
+			background-color: #aaaaaa;
 		}
 		.photocell{
 			display: table-cell;
 			border: solid grey;
 			text-align: center;
 			vertical-align: middle;
+			background-color: #aaaaaa;
 		}
 	</style>
 </head>
@@ -53,10 +56,10 @@
 			</div>
 			<div class="photocell" align="center">
 				<img src=<%= imagefile %> alt="Photo" width="50%" height="auto"><br>
-				<video width="320" height="240" controls>
+				<audio width="320" height="240" controls>
 					<source src=<%= videofile %>>
-					Your browser does not support the video tag.
-				</video> 			
+					Your browser does not support the audio tag.
+				</audio> 			
 			</div>
 		</div>
 	</div>
