@@ -290,3 +290,10 @@ function purgeJob (result2, result3) {
 // 
 // sh-4.2$ echo $MONGODB_ADMIN_PASSWORD
 // 
+// db.createUser(
+//   {
+//     user: $MONGODB_USER,
+//     pwd: $MONGODB_ADMIN_PASSWORD,
+//     roles: [ "readWrite", "dbAdmin" ]
+//   }
+//)
