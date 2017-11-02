@@ -283,6 +283,7 @@ function purgeJob (result2, result3) {
   agenda.schedule('in ' + PURGE_TIMER + ' seconds', jobname)
 }
 
+// mongo -u admin -p $MONGODB_ADMIN_PASSWORD admin
 // sh-4.2$ echo $MONGODB_USER               
 // 
 // sh-4.2$ echo $MONGODB_PASSWORD
