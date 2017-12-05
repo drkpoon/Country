@@ -15,7 +15,7 @@ var Agenda = require('agenda')
 var NumberParser = require('numberparser');
 
 if (process.env.MONGODB_USER){
-  var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_ADMIN_PASSWORD + '@10.130.58.210:27017'
+  var rootUrl = 'mongodb://' + process.env.MONGODB_USER + ':' + process.env.MONGODB_ADMIN_PASSWORD + '@10.129.95.161:27017'
 }else{
   var rootUrl = 'mongodb://' + 'derek' + ':' + 'derek' + '@localhost:27017'
 }
@@ -290,10 +290,12 @@ function purgeJob (result2, result3) {
 // 
 // sh-4.2$ echo $MONGODB_ADMIN_PASSWORD
 // 
+// use agenda
+// use countries
 // db.createUser(
 //   {
-//     user: $MONGODB_USER,
-//     pwd: $MONGODB_ADMIN_PASSWORD,
+//     user: "$MONGODB_USER",
+//     pwd: "$MONGODB_ADMIN_PASSWORD",
 //     roles: [ "readWrite", "dbAdmin" ]
 //   }
 //)
